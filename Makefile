@@ -122,7 +122,7 @@ endif
 ldflags += $(LDFLAGS)
 ldflags := $(strip $(ldflags))
 
-BUILD_FLAGS := -tags "$(build_tags)" -ldflags '$(ldflags)'
+BUILD_FLAGS := -tags "$(build_tags)" -ldflags '$(ldflags)' -buildvcs=false
 # check for nostrip option
 ifeq (,$(findstring nostrip,$(OSMOSIS_BUILD_OPTIONS)))
   BUILD_FLAGS += -trimpath
